@@ -1,0 +1,96 @@
+/* ===== NagpurNosh theme: Nagpur is the "Orange City" ===== */
+:root {
+  --nn-orange: #f97316;
+  --nn-orange-dark: #c2410c;
+  --nn-green: #14532d;
+  --nn-green-light: #198754;
+  --nn-cream: #fff7ed;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body { font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; color: #2b2b2b; }
+
+/* Navbar */
+.nn-navbar { background: rgba(20, 83, 45, 0.95); backdrop-filter: blur(6px); box-shadow: 0 2px 10px rgba(0,0,0,.15); }
+.nn-navbar .nav-link { font-weight: 500; }
+.nn-navbar .nav-link:hover,
+.nn-navbar .nav-link.active { color: #ffc107; }
+
+/* Hero */
+.hero-slide { min-height: 100vh; display: flex; align-items: center; color: #fff; padding-top: 70px; }
+.hero-1 { background: linear-gradient(135deg, #14532d 0%, #166534 45%, #f97316 130%); }
+.hero-2 { background: linear-gradient(135deg, #c2410c 0%, #f97316 55%, #fbbf24 130%); }
+.hero-3 { background: linear-gradient(135deg, #7c2d12 0%, #c2410c 50%, #14532d 130%); }
+.hero-content { padding-bottom: 4rem; }
+.hero-content h1 { text-shadow: 0 2px 12px rgba(0,0,0,.25); }
+
+/* Stats */
+.stats-strip { background: var(--nn-cream); border-bottom: 3px solid var(--nn-orange); }
+.stat-num { font-size: 2rem; font-weight: 800; color: var(--nn-orange-dark); }
+
+/* Section titles */
+.section-title { font-weight: 800; color: var(--nn-green); position: relative; display: inline-block; padding-bottom: .5rem; }
+.section-title::after { content: ""; position: absolute; left: 25%; right: 25%; bottom: 0; height: 4px; border-radius: 4px; background: var(--nn-orange); }
+
+/* Step cards */
+.step-card { transition: transform .25s ease, box-shadow .25s ease; }
+.step-card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,.12) !important; }
+.step-icon { width: 70px; height: 70px; margin: 0 auto 1rem; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 1.9rem; color: #fff; background: linear-gradient(135deg, var(--nn-orange), var(--nn-orange-dark)); }
+
+/* Mess cards */
+.mess-card { border: 0; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
+.mess-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(0,0,0,.15) !important; }
+.mess-banner { height: 120px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #fff; }
+.mess-card .price { font-size: 1.35rem; font-weight: 800; color: var(--nn-green); }
+.veg-dot, .nonveg-dot { display: inline-block; width: 14px; height: 14px; border: 2px solid; border-radius: 3px; position: relative; vertical-align: middle; }
+.veg-dot { border-color: #198754; }
+.veg-dot::after, .nonveg-dot::after { content: ""; position: absolute; inset: 2px; border-radius: 50%; }
+.veg-dot::after { background: #198754; }
+.nonveg-dot { border-color: #dc3545; }
+.nonveg-dot::after { background: #dc3545; }
+
+/* Menu table */
+.table caption { caption-side: bottom; font-size: .85rem; }
+
+/* Plans */
+.plan-card { position: relative; transition: transform .25s ease; border-radius: 1rem; overflow: hidden; }
+.plan-card:hover { transform: translateY(-6px); }
+.plan-popular { border: 2px solid var(--nn-green-light); transform: scale(1.03); }
+.plan-popular:hover { transform: scale(1.03) translateY(-6px); }
+.plan-price { font-size: 2.3rem; font-weight: 800; color: var(--nn-green); }
+.plan-price small { font-size: .9rem; font-weight: 500; color: #6c757d; }
+.plan-list { max-width: 230px; }
+.plan-list li { margin-bottom: .55rem; }
+.ribbon { position: absolute; top: 14px; right: -34px; background: var(--nn-orange); color: #fff; font-size: .72rem; font-weight: 700;
+  padding: 4px 40px; transform: rotate(40deg); z-index: 2; }
+
+/* Form */
+.nn-card-header { background: linear-gradient(90deg, var(--nn-green), var(--nn-green-light)); }
+.form-control:focus, .form-select:focus { border-color: var(--nn-orange); box-shadow: 0 0 0 .2rem rgba(249,115,22,.2); }
+.form-check-input:checked { background-color: var(--nn-green-light); border-color: var(--nn-green-light); }
+.form-range::-webkit-slider-thumb { background: var(--nn-orange); }
+.form-range::-moz-range-thumb { background: var(--nn-orange); }
+
+/* Accordion */
+.accordion-button:not(.collapsed) { background: var(--nn-cream); color: var(--nn-orange-dark); }
+
+/* Footer */
+.nn-footer { background: var(--nn-green); }
+.nn-footer a { color: #ffe0b2; text-decoration: none; }
+.nn-footer a:hover { color: #fff; text-decoration: underline; }
+
+/* Back to top */
+#toTop { position: fixed; bottom: 20px; left: 20px; width: 46px; height: 46px; display: none; z-index: 1030; }
+
+/* Fade-in on scroll */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+/* Responsive tweaks */
+@media (max-width: 767.98px) {
+  .hero-slide { min-height: 88vh; }
+  .hero-content h1 { font-size: 2.1rem; }
+  .plan-popular, .plan-popular:hover { transform: none; }
+  .stat-num { font-size: 1.6rem; }
+}
