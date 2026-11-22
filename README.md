@@ -15,7 +15,6 @@ A responsive frontend web app for college students in Nagpur to discover nearby 
 
 - **HTML5** (`index.html`)
 - **CSS3** (`style.css`)
-- **JavaScript (ES6+)** (`script.js`)
 - **Bootstrap 5.3.3 & Bootstrap Icons** (loaded via CDN)
 
 ## Project Structure
@@ -24,5 +23,4 @@ A responsive frontend web app for college students in Nagpur to discover nearby 
 nagpurnosh/
 ├── index.html
 ├── style.css
-├── script.js
 └── README.md
