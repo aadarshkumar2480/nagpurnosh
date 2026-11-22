@@ -1,536 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="NagpurNosh - find affordable tiffin services and messes near your college in Nagpur.">
-  <title>NagpurNosh | Tiffin &amp; Mess Finder for Students</title>
+  <title>NagpurNosh - Tiffin &amp; Mess Finder for Students</title>
 
-  <!-- Bootstrap 5.3.3 + Bootstrap Icons (CDN) -->
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- External CSS -->
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ========== NAVBAR ========== -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top nn-navbar">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#home"><i class="bi bi-egg-fried me-2"></i>Nagpur<span class="text-warning">Nosh</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#how">How it Works</a></li>
-          <li class="nav-item"><a class="nav-link" href="#messes">Find a Mess</a></li>
+  <!-- Navigation Bar -->
+  <header id="top">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-success">
+      <div class="container">
+        <a class="navbar-brand" href="#top"><b>NagpurNosh</b></a>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#messes">Messes</a></li>
           <li class="nav-item"><a class="nav-link" href="#menu">Weekly Menu</a></li>
           <li class="nav-item"><a class="nav-link" href="#plans">Plans</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-warning btn-sm fw-semibold px-3" href="#register">Register Now</a></li>
+          <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="#map">Location Map</a></li>
         </ul>
       </div>
-    </div>
-  </nav>
-
-  <!-- ========== HERO CAROUSEL ========== -->
-  <header id="home">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active hero-slide hero-1">
-          <div class="container hero-content">
-            <span class="badge text-bg-warning mb-3">Built for Nagpur students</span>
-            <h1 class="display-4 fw-bold">Ghar jaisa khana,<br>near your college.</h1>
-            <p class="lead col-lg-6">Compare verified tiffin services and messes by price, area and food type. No more skipping lunch on exam days.</p>
-            <a href="#messes" class="btn btn-warning btn-lg fw-semibold me-2">Find a Mess</a>
-            <a href="#plans" class="btn btn-outline-light btn-lg">View Plans</a>
-          </div>
-        </div>
-        <div class="carousel-item hero-slide hero-2">
-          <div class="container hero-content">
-            <span class="badge text-bg-light mb-3">Budget friendly</span>
-            <h1 class="display-4 fw-bold">Meals starting at<br>₹70 per thali.</h1>
-            <p class="lead col-lg-6">Monthly plans designed for hostel and PG students. Pay less, eat better, skip the cooking.</p>
-            <a href="#plans" class="btn btn-light btn-lg fw-semibold">See Monthly Plans</a>
-          </div>
-        </div>
-        <div class="carousel-item hero-slide hero-3">
-          <div class="container hero-content">
-            <span class="badge text-bg-warning mb-3">Veg &amp; Non-Veg</span>
-            <h1 class="display-4 fw-bold">Saoji to Satvik,<br>choose your taste.</h1>
-            <p class="lead col-lg-6">From classic Maharashtrian thalis to Nagpur's famous Saoji flavours, every craving is covered.</p>
-            <a href="#menu" class="btn btn-warning btn-lg fw-semibold">Check Weekly Menu</a>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    </nav>
   </header>
 
-  <main>
-    <!-- ========== STATS STRIP ========== -->
-    <section class="stats-strip py-4">
-      <div class="container">
-        <div class="row text-center g-3">
-          <div class="col-6 col-md-3"><div class="stat-num" data-count="25">0</div><div class="small text-uppercase">Partner Messes</div></div>
-          <div class="col-6 col-md-3"><div class="stat-num" data-count="1200">0</div><div class="small text-uppercase">Happy Students</div></div>
-          <div class="col-6 col-md-3"><div class="stat-num" data-count="8">0</div><div class="small text-uppercase">Areas Covered</div></div>
-          <div class="col-6 col-md-3"><div class="stat-num" data-count="70">0</div><div class="small text-uppercase">Starting Price (₹)</div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== HOW IT WORKS ========== -->
-    <section id="how" class="py-5">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="section-title">How NagpurNosh Works</h2>
-          <p class="text-muted">Three simple steps from hungry to happy.</p>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card step-card h-100 text-center border-0 shadow-sm">
-              <div class="card-body p-4">
-                <div class="step-icon"><i class="bi bi-search"></i></div>
-                <h5 class="card-title">1. Search</h5>
-                <p class="card-text text-muted">Filter messes by area, veg or non-veg, and budget per meal.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card step-card h-100 text-center border-0 shadow-sm">
-              <div class="card-body p-4">
-                <div class="step-icon"><i class="bi bi-card-checklist"></i></div>
-                <h5 class="card-title">2. Choose a Plan</h5>
-                <p class="card-text text-muted">Pick a daily, weekly or monthly plan that fits your schedule.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card step-card h-100 text-center border-0 shadow-sm">
-              <div class="card-body p-4">
-                <div class="step-icon"><i class="bi bi-bicycle"></i></div>
-                <h5 class="card-title">3. Enjoy</h5>
-                <p class="card-text text-muted">Get tiffin delivered to your hostel, PG or college gate on time.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== MESS LISTING (JS RENDERED) ========== -->
-    <section id="messes" class="py-5 bg-light">
-      <div class="container">
-        <div class="text-center mb-4">
-          <h2 class="section-title">Find a Mess Near You</h2>
-          <p class="text-muted">Search and filter. Sample data for demonstration.</p>
-        </div>
-
-        <div class="row g-3 mb-4 justify-content-center">
-          <div class="col-lg-5">
-            <div class="input-group">
-              <span class="input-group-text"><i class="bi bi-search"></i></span>
-              <input type="search" id="searchBox" class="form-control" placeholder="Search by name or area (e.g. Katol Road)" aria-label="Search messes">
-            </div>
-          </div>
-          <div class="col-lg-auto">
-            <div class="btn-group flex-wrap" role="group" aria-label="Filter messes">
-              <button type="button" class="btn btn-outline-success active" data-filter="all">All</button>
-              <button type="button" class="btn btn-outline-success" data-filter="veg">Veg</button>
-              <button type="button" class="btn btn-outline-success" data-filter="nonveg">Non-Veg</button>
-              <button type="button" class="btn btn-outline-success" data-filter="budget">Under ₹80</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="row g-4" id="messGrid"><!-- cards injected by script.js --></div>
-        <div id="noResults" class="alert alert-warning text-center d-none mt-4" role="alert">
-          <i class="bi bi-emoji-frown me-1"></i> No messes match your search. Try a different filter.
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== WEEKLY MENU TABLE ========== -->
-    <section id="menu" class="py-5">
-      <div class="container">
-        <div class="text-center mb-4">
-          <h2 class="section-title">This Week's Thali Menu</h2>
-          <p class="text-muted">Sample menu from our featured partner, Annapurna Tiffin Service.</p>
-        </div>
-        <div class="table-responsive shadow-sm rounded">
-          <table class="table table-bordered table-hover align-middle text-center mb-0">
-            <caption class="px-3 text-start">Lunch includes 4 roti / rice, dal, sabzi, salad and sweet on Sundays.</caption>
-            <thead class="table-success">
-              <tr>
-                <th scope="col">Day</th>
-                <th scope="col">Sabzi</th>
-                <th scope="col">Dal / Kadhi</th>
-                <th scope="col">Special</th>
-                <th scope="col">Type</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">Monday</th><td>Aloo Gobhi</td><td>Dal Tadka</td><td>Papad</td><td rowspan="5" class="bg-success-subtle fw-semibold">Pure<br>Veg</td></tr>
-              <tr><th scope="row">Tuesday</th><td>Bhindi Masala</td><td>Varan</td><td>Pickle</td></tr>
-              <tr><th scope="row">Wednesday</th><td>Paneer Bhurji</td><td>Dal Fry</td><td>Boondi Raita</td></tr>
-              <tr><th scope="row">Thursday</th><td>Pithla</td><td>Kadhi</td><td>Thecha</td></tr>
-              <tr><th scope="row">Friday</th><td>Matar Paneer</td><td>Dal Tadka</td><td>Jeera Rice</td></tr>
-              <tr><th scope="row">Saturday</th><td>Mix Veg</td><td>Varan Bhaat</td><td>Gulab Jamun</td><td class="bg-warning-subtle fw-semibold">Weekend Special</td></tr>
-              <tr class="table-light"><th scope="row">Sunday</th><td colspan="3">Special Maharashtrian Thali with Puran Poli</td><td class="bg-warning-subtle fw-semibold">Festive</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== PLANS ========== -->
-    <section id="plans" class="py-5 bg-light">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="section-title">Simple, Student-Friendly Plans</h2>
-          <p class="text-muted">No hidden charges. Cancel or pause anytime.</p>
-        </div>
-        <div class="row g-4 justify-content-center align-items-stretch">
-          <div class="col-md-6 col-lg-4">
-            <div class="card plan-card h-100 text-center shadow-sm">
-              <div class="card-header bg-white border-0 pt-4"><h5 class="text-muted mb-0">Trial</h5></div>
-              <div class="card-body">
-                <div class="plan-price">₹399<small>/week</small></div>
-                <ul class="list-unstyled my-4 text-start mx-auto plan-list">
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>1 meal per day</li>
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Choose any mess</li>
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Pause anytime</li>
-                  <li class="text-muted"><i class="bi bi-x-circle me-2"></i>Free delivery</li>
-                </ul>
-                <a href="#register" class="btn btn-outline-success w-100 plan-btn" data-plan="Trial">Choose Trial</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="card plan-card plan-popular h-100 text-center shadow">
-              <div class="ribbon">Most Popular</div>
-              <div class="card-header bg-success text-white border-0 pt-4"><h5 class="mb-0">Student Monthly</h5></div>
-              <div class="card-body">
-                <div class="plan-price">₹2,199<small>/month</small></div>
-                <ul class="list-unstyled my-4 text-start mx-auto plan-list">
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>2 meals per day</li>
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Free delivery within 3 km</li>
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Swap mess once a month</li>
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Skip up to 4 meals</li>
-                </ul>
-                <a href="#register" class="btn btn-success w-100 plan-btn" data-plan="Student Monthly">Choose Monthly</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="card plan-card h-100 text-center shadow-sm">
-              <div class="card-header bg-white border-0 pt-4"><h5 class="text-muted mb-0">Semester Saver</h5></div>
-              <div class="card-body">
-                <div class="plan-price">₹9,999<small>/4 months</small></div>
-                <ul class="list-unstyled my-4 text-start mx-auto plan-list">
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>2 meals per day</li>
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Free delivery</li>
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Exam-week extra tiffin</li>
-                  <li><i class="bi bi-check-circle-fill text-success me-2"></i>Save about 10%</li>
-                </ul>
-                <a href="#register" class="btn btn-outline-success w-100 plan-btn" data-plan="Semester Saver">Choose Semester</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== REGISTRATION FORM ========== -->
-    <section id="register" class="py-5">
-      <div class="container">
-        <div class="text-center mb-4">
-          <h2 class="section-title">Register for a Tiffin Plan</h2>
-          <p class="text-muted">Fill in your details and we will connect you with a mess.</p>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-9">
-            <div class="alert alert-info d-flex align-items-center" role="alert">
-              <i class="bi bi-info-circle-fill me-2"></i>
-              <div>All fields marked with * are mandatory.</div>
-            </div>
-
-            <div class="card shadow border-0">
-              <div class="card-header nn-card-header text-white fw-semibold">
-                <i class="bi bi-person-plus me-2"></i>Student Registration
-              </div>
-              <div class="card-body p-4">
-                <form id="regForm" class="needs-validation" novalidate>
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label for="fullName" class="form-label">Full Name *</label>
-                      <input type="text" class="form-control" id="fullName" placeholder="Enter your name" required minlength="3">
-                      <div class="invalid-feedback">Please enter your name (at least 3 characters).</div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="rollNo" class="form-label">Roll Number</label>
-                      <input type="text" class="form-control" id="rollNo" placeholder="Optional">
-                    </div>
-                    <div class="col-md-6">
-                      <label for="email" class="form-label">Email Address *</label>
-                      <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-                      <div class="invalid-feedback">Please enter a valid email.</div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="phone" class="form-label">Mobile Number *</label>
-                      <div class="input-group">
-                        <span class="input-group-text">+91</span>
-                        <input type="tel" class="form-control" id="phone" placeholder="10-digit number" pattern="[6-9][0-9]{9}" required>
-                        <div class="invalid-feedback">Enter a valid 10-digit Indian mobile number.</div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="area" class="form-label">Your Area *</label>
-                      <select class="form-select" id="area" required>
-                        <option value="" selected disabled>Select your area</option>
-                        <option>Katol Road</option>
-                        <option>Gittikhadan</option>
-                        <option>Dharampeth</option>
-                        <option>Pratap Nagar</option>
-                        <option>Sadar</option>
-                        <option>Manish Nagar</option>
-                        <option>Wardha Road</option>
-                      </select>
-                      <div class="invalid-feedback">Please select an area.</div>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="plan" class="form-label">Plan *</label>
-                      <select class="form-select" id="plan" required>
-                        <option value="" selected disabled>Select a plan</option>
-                        <option>Trial</option>
-                        <option>Student Monthly</option>
-                        <option>Semester Saver</option>
-                      </select>
-                      <div class="invalid-feedback">Please choose a plan.</div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label d-block">Food Preference *</label>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="food" id="foodVeg" value="Veg" required>
-                        <label class="form-check-label" for="foodVeg">Veg</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="food" id="foodNon" value="Non-Veg">
-                        <label class="form-check-label" for="foodNon">Non-Veg</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="food" id="foodJain" value="Jain">
-                        <label class="form-check-label" for="foodJain">Jain</label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6">
-                      <label class="form-label d-block">Meals Needed</label>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input meal-check" type="checkbox" id="mealB" value="Breakfast">
-                        <label class="form-check-label" for="mealB">Breakfast</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input meal-check" type="checkbox" id="mealL" value="Lunch" checked>
-                        <label class="form-check-label" for="mealL">Lunch</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input meal-check" type="checkbox" id="mealD" value="Dinner">
-                        <label class="form-check-label" for="mealD">Dinner</label>
-                      </div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="budget" class="form-label">Budget per meal: <strong>₹<span id="budgetOut">80</span></strong></label>
-                      <input type="range" class="form-range" id="budget" min="50" max="150" step="5" value="80">
-                      <div class="form-text">Slide to set your comfortable price per meal.</div>
-                    </div>
-
-                    <div class="col-12">
-                      <label for="notes" class="form-label">Special Instructions</label>
-                      <textarea class="form-control" id="notes" rows="3" placeholder="Less spicy, no onion-garlic, etc."></textarea>
-                    </div>
-
-                    <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="terms" required>
-                        <label class="form-check-label" for="terms">I accept the terms and conditions *</label>
-                        <div class="invalid-feedback">You must accept before submitting.</div>
-                      </div>
-                    </div>
-
-                    <div class="col-12 d-flex flex-wrap gap-2">
-                      <button type="submit" class="btn btn-success px-4"><i class="bi bi-send me-1"></i>Submit Registration</button>
-                      <button type="reset" class="btn btn-secondary" id="resetBtn">Clear</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-
-            <!-- Submitted registrations -->
-            <div class="mt-5" id="regTableWrap">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <h5 class="mb-0">Registrations on this device</h5>
-                <button class="btn btn-sm btn-outline-danger" id="clearAll"><i class="bi bi-trash me-1"></i>Clear all</button>
-              </div>
-              <div class="table-responsive">
-                <table class="table table-striped table-bordered align-middle mb-0">
-                  <thead class="table-success">
-                    <tr><th>#</th><th>Name</th><th>Area</th><th>Plan</th><th>Food</th><th>Meals</th><th>Budget</th></tr>
-                  </thead>
-                  <tbody id="regBody">
-                    <tr id="emptyRow"><td colspan="7" class="text-center text-muted">No registrations yet.</td></tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== TESTIMONIALS ========== -->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <div class="text-center mb-4"><h2 class="section-title">What Students Say</h2></div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm"><div class="card-body">
-              <div class="text-warning mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
-              <p class="card-text">"Finally a mess that tastes like home. The monthly plan saved me around ₹600."</p>
-              <p class="mb-0 fw-semibold">Riya, 1st Year CSE</p>
-            </div></div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm"><div class="card-body">
-              <div class="text-warning mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-              <p class="card-text">"Delivery reaches the hostel gate before my lab ends. Exam week tiffin is a lifesaver."</p>
-              <p class="mb-0 fw-semibold">Aman, 2nd Year ECE</p>
-            </div></div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm"><div class="card-body">
-              <div class="text-warning mb-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
-              <p class="card-text">"Loved the Saoji option on weekends. Easy to compare prices before choosing."</p>
-              <p class="mb-0 fw-semibold">Sneha, 3rd Year IT</p>
-            </div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== FAQ ========== -->
-    <section id="faq" class="py-5">
-      <div class="container">
-        <div class="text-center mb-4"><h2 class="section-title">Frequently Asked Questions</h2></div>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="accordion" id="faqAcc">
-              <div class="accordion-item">
-                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">Can I pause my plan during holidays?</button></h3>
-                <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body">Yes. You can pause or skip meals by informing the mess a day in advance. Student Monthly allows up to 4 skipped meals.</div></div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">How is hygiene ensured?</button></h3>
-                <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Every partner mess is visited and rated on kitchen cleanliness, ingredient quality and packaging before listing.</div></div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">Is a trial available before subscribing?</button></h3>
-                <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Yes, the Trial plan lets you try a mess for one week before committing to a monthly plan.</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="nn-footer text-white pt-5 pb-3">
+  <!-- Hero Banner -->
+  <section class="hero-box text-center">
     <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <h5><i class="bi bi-egg-fried me-2"></i>Nagpur<span class="text-warning">Nosh</span></h5>
-          <p class="small opacity-75">A mini project for Computer Workshop-I (LA-II). Built with HTML, CSS, Bootstrap 5 and JavaScript.</p>
+      <h1 class="anim-badge">NagpurNosh - Ghar Jaisa Khana</h1>
+      <p class="lead">Simple tiffin and mess finder for college students in Nagpur.</p>
+      <hr>
+      <p>
+        We help students compare <b>veg</b>, <b>non-veg</b>, and <i>budget-friendly</i> tiffin services near their college or hostel.
+      </p>
+      <a href="#messes" class="btn btn-warning">Find a Mess</a>
+      <a href="#register" class="btn btn-light">Register Now</a>
+    </div>
+  </section>
+
+  <!-- About & How It Works -->
+  <section id="about" class="py-4">
+    <div class="container">
+      <h2>About NagpurNosh</h2>
+      <p>
+        Many college students skip meals or eat outside food during exams.
+        NagpurNosh lists <u>affordable student messes</u> across Nagpur with clear menus and plans.
+      </p>
+
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="card-header">How It Works (Steps)</div>
+            <div class="card-body">
+              <ol>
+                <li>Check nearby messes in your area.</li>
+                <li>Compare weekly thali menu and plan prices.</li>
+                <li>Fill out the student registration form below.</li>
+              </ol>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-2">
-          <h6>Quick Links</h6>
-          <ul class="list-unstyled small">
-            <li><a href="#messes">Find a Mess</a></li>
-            <li><a href="#plans">Plans</a></li>
+
+        <div class="col-md-6">
+          <div class="card mb-3">
+            <div class="card-header">Popular Areas in Nagpur</div>
+            <div class="card-body">
+              <ul>
+                <li>Katol Road</li>
+                <li>Dharampeth</li>
+                <li>Gittikhadan</li>
+                <li>Pratap Nagar</li>
+                <li>Sadar &amp; Manish Nagar</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HTML5 Details & Summary -->
+      <details class="info-box">
+        <summary>Click here for student guidelines</summary>
+        <p class="mt-2 mb-0">
+          <strong>Note:</strong> Please inform the mess at least one day earlier if you want to skip a meal during holidays.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Featured Messes (Cards + Grid) -->
+  <section id="messes" class="py-4 bg-light">
+    <div class="container">
+      <h2>Featured Messes in Nagpur</h2>
+      <p>Sample messes for first-year student demo.</p>
+
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-header">Annapurna Tiffin Service</div>
+            <div class="card-body">
+              <figure class="text-center">
+                <img src="annapurna.jpg" alt="Annapurna Tiffin Thali" class="img-fluid rounded mess-img">
+                <figcaption>Maharashtrian home-style thali[cite: 52]</figcaption>
+              </figure>
+              <p><b>Area:</b> Katol Road[cite: 51, 52]<br>
+                 <b>Type:</b> Pure Veg[cite: 52]<br>
+                 <b>Price:</b> &#8377;75 per meal[cite: 52]</p>
+              <a href="#register" class="btn btn-primary">Select Mess</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-header">Saoji Spice Kitchen[cite: 52]</div>
+            <div class="card-body">
+              <figure class="text-center">
+                <img src="saoji.jpg" alt="Saoji Spice Kitchen Meal" class="img-fluid rounded mess-img">
+                <figcaption>Nagpur Saoji chicken and mutton[cite: 52]</figcaption>
+              </figure>
+              <p><b>Area:</b> Dharampeth[cite: 51, 52]<br>
+                 <b>Type:</b> Veg &amp; Non-Veg[cite: 52]<br>
+                 <b>Price:</b> &#8377;110 per meal[cite: 52]</p>
+              <a href="#register" class="btn btn-primary">Select Mess</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-header">Gharkul Mess[cite: 52]</div>
+            <div class="card-body">
+              <figure class="text-center">
+                <img src="gharkul.jpg" alt="Gharkul Mess Meal" class="img-fluid rounded mess-img">
+                <figcaption>Budget roti, sabzi, dal and rice[cite: 52]</figcaption>
+              </figure>
+              <p><b>Area:</b> Gittikhadan[cite: 51, 52]<br>
+                 <b>Type:</b> Pure Veg[cite: 52]<br>
+                 <b>Price:</b> &#8377;70 per meal[cite: 52]</p>
+              <a href="#register" class="btn btn-primary">Select Mess</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Weekly Menu Table (with rowspan and colspan) -->
+  <section id="menu" class="py-4">
+    <div class="container">
+      <h2>Weekly Thali Menu</h2>
+      <p>Sample weekly schedule from Annapurna Tiffin Service[cite: 51].</p>
+
+      <table border="1" cellpadding="8" cellspacing="2" width="100%" class="table table-bordered text-center">
+        <caption>Weekly Lunch Menu for Students[cite: 51]</caption>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Sabzi</th>
+            <th>Dal / Kadhi</th>
+            <th>Special</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Monday</th>
+            <td>Aloo Gobhi[cite: 51]</td>
+            <td>Dal Tadka[cite: 51]</td>
+            <td>Papad[cite: 51]</td>
+            <td rowspan="5"><b>Pure Veg</b>[cite: 51]</td>
+          </tr>
+          <tr>
+            <th>Tuesday</th>
+            <td>Bhindi Masala[cite: 51]</td>
+            <td>Varan[cite: 51]</td>
+            <td>Pickle[cite: 51]</td>
+          </tr>
+          <tr>
+            <th>Wednesday</th>
+            <td>Paneer Bhurji[cite: 51]</td>
+            <td>Dal Fry[cite: 51]</td>
+            <td>Boondi Raita[cite: 51]</td>
+          </tr>
+          <tr>
+            <th>Thursday</th>
+            <td>Pithla[cite: 51]</td>
+            <td>Kadhi[cite: 51]</td>
+            <td>Thecha[cite: 51]</td>
+          </tr>
+          <tr>
+            <th>Friday</th>
+            <td>Matar Paneer[cite: 51]</td>
+            <td>Dal Tadka[cite: 51]</td>
+            <td>Jeera Rice[cite: 51]</td>
+          </tr>
+          <tr>
+            <th>Saturday</th>
+            <td>Mix Veg[cite: 51]</td>
+            <td>Varan Bhaat[cite: 51]</td>
+            <td>Gulab Jamun[cite: 51]</td>
+            <td><b>Weekend</b>[cite: 51]</td>
+          </tr>
+          <tr>
+            <th>Sunday</th>
+            <td colspan="3">Special Thali with Puran Poli[cite: 51]</td>
+            <td><b>Festive</b>[cite: 51]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Plans Comparison Table -->
+  <section id="plans" class="py-4 bg-light">
+    <div class="container">
+      <h2>Student Meal Plans</h2>
+      <table border="1" cellpadding="8" cellspacing="2" width="100%" class="table table-bordered text-center">
+        <caption>Available Plans for Students[cite: 51]</caption>
+        <thead>
+          <tr>
+            <th>Plan Name</th>
+            <th>Duration</th>
+            <th>Price</th>
+            <th>Meals Per Day</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trial[cite: 51]</td>
+            <td>1 Week[cite: 51]</td>
+            <td>&#8377;399[cite: 51]</td>
+            <td>1 Meal[cite: 51]</td>
+          </tr>
+          <tr>
+            <td><b>Student Monthly</b>[cite: 51]</td>
+            <td>1 Month[cite: 51]</td>
+            <td><b>&#8377;2,199</b>[cite: 51]</td>
+            <td>2 Meals[cite: 51]</td>
+          </tr>
+          <tr>
+            <td>Semester Saver[cite: 51]</td>
+            <td>4 Months[cite: 51]</td>
+            <td>&#8377;9,999[cite: 51]</td>
+            <td>2 Meals[cite: 51]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Student Registration Form -->
+  <section id="register" class="py-4">
+    <div class="container">
+      <h2>Student Mess Registration</h2>
+
+      <div class="alert alert-info">
+        Please fill out the form below to register your tiffin preference. Fields marked with * are required[cite: 51].
+      </div>
+
+      <div class="card">
+        <div class="card-header">Registration Form</div>
+        <div class="card-body">
+          <form action="#" method="post">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="fname" class="form-label">First Name *</label>
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lname" class="form-label">Last Name *</label>
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last name" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="student@example.com" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="roll" class="form-label">Roll Number</label>
+                <input type="text" class="form-control" id="roll" name="roll" placeholder="Enter roll number">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="areaSelect" class="form-label">Select Area *</label>
+                <select class="form-select" id="areaSelect" name="area" required>
+                  <option selected value="">Choose an area</option>
+                  <option value="Katol Road">Katol Road[cite: 51]</option>
+                  <option value="Dharampeth">Dharampeth[cite: 51]</option>
+                  <option value="Gittikhadan">Gittikhadan[cite: 51]</option>
+                  <option value="Pratap Nagar">Pratap Nagar[cite: 51]</option>
+                  <option value="Sadar">Sadar[cite: 51]</option>
+                </select>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="planSelect" class="form-label">Select Plan *</label>
+                <select class="form-select" id="planSelect" name="plan" required>
+                  <option selected value="">Choose a plan</option>
+                  <option value="Trial">Trial (&#8377;399/week)[cite: 51]</option>
+                  <option value="Student Monthly">Student Monthly (&#8377;2,199/month)[cite: 51]</option>
+                  <option value="Semester Saver">Semester Saver (&#8377;9,999/4 months)[cite: 51]</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Food Preference *</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="food" id="veg" value="Veg" required>
+                <label class="form-check-label" for="veg">Veg[cite: 51]</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="food" id="nonveg" value="Non-Veg">
+                <label class="form-check-label" for="nonveg">Non-Veg[cite: 51]</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="food" id="jain" value="Jain">
+                <label class="form-check-label" for="jain">Jain[cite: 51]</label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Meals Required</label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="breakfast" name="meals" value="Breakfast">
+                <label class="form-check-label" for="breakfast">Breakfast[cite: 51]</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="lunch" name="meals" value="Lunch" checked>
+                <label class="form-check-label" for="lunch">Lunch[cite: 51]</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="dinner" name="meals" value="Dinner">
+                <label class="form-check-label" for="dinner">Dinner[cite: 51]</label>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="budgetRange" class="form-label">Budget Per Meal Range</label>
+              <input type="range" class="form-range" id="budgetRange" name="budget" min="50" max="150" value="80">
+              <div class="form-text">Approximate range: &#8377;50 to &#8377;150 per meal[cite: 51].</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="idCard" class="form-label">Upload Student ID Card (PDF or Image)</label>
+              <input type="file" class="form-control" id="idCard" name="idCard" accept=".pdf,.jpg,.png">
+            </div>
+
+            <div class="mb-3">
+              <label for="notes" class="form-label">Special Instructions</label>
+              <textarea class="form-control" id="notes" name="notes" rows="3" placeholder="Less spicy, no onion/garlic, hostel gate delivery..."></textarea>
+            </div>
+
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="terms" required>
+              <label class="form-check-label" for="terms">I accept the terms and conditions *</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Registration</button>
+            <button type="reset" class="btn btn-secondary">Clear</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Iframe Section -->
+  <section id="map" class="py-4 bg-light">
+    <div class="container">
+      <h2>Nagpur Area Map (iFrame)</h2>
+      <div class="card">
+        <div class="card-header">Delivery Coverage Area</div>
+        <div class="card-body">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=79.00%2C21.10%2C79.15%2C21.20&amp;layer=mapnik" width="100%" height="240" title="Nagpur Map"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>NagpurNosh</h4>
+          <p>First-Year B.Tech Computer Workshop-I Project[cite: 51].</p>
+          <p><b>Team Members:</b> Aadarsh Kumar Sinha, Neel Kothekar, Taraksh Jaiswal[cite: 51]</p>
+        </div>
+        <div class="col-md-6">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#messes">Messes</a></li>
+            <li><a href="#menu">Weekly Menu</a></li>
             <li><a href="#register">Register</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-3">
-          <h6>Contact</h6>
-          <ul class="list-unstyled small opacity-75">
-            <li><i class="bi bi-geo-alt me-2"></i>Katol Road, Nagpur</li>
-            <li><i class="bi bi-envelope me-2"></i>hello@nagpurnosh.example</li>
-            <li><i class="bi bi-telephone me-2"></i>+91 00000 00000</li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h6>Team</h6>
-          <ul class="list-unstyled small opacity-75">
-            <li>Member 1 - Aadarsh Kumar Sinha</li>
-            <li>Member 2 - Neel Kothekar</li>
-            <li>Member 3 - Taraksh Jaiswal</li>
           </ul>
         </div>
       </div>
-      <hr class="border-light opacity-25">
-      <p class="text-center small mb-0 opacity-75">&copy; 2026 NagpurNosh. All rights reserved. Demo project, all data is fictional.</p>
+      <hr>
+      <p class="text-center mb-0">&copy; 2026 NagpurNosh. Demo project for academic lab submission[cite: 51].</p>
     </div>
   </footer>
 
-  <!-- ========== MESS DETAIL MODAL ========== -->
-  <div class="modal fade" id="messModal" tabindex="-1" aria-labelledby="messModalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="messModalTitle">Mess</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="messModalBody"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a href="#register" class="btn btn-success" data-bs-dismiss="modal">Register for this mess</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========== TOAST ========== -->
-  <div class="toast-container position-fixed bottom-0 end-0 p-3">
-    <div id="appToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
-      <div class="d-flex">
-        <div class="toast-body" id="toastMsg">Done!</div>
-        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Back to top -->
-  <button id="toTop" class="btn btn-warning rounded-circle shadow" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
