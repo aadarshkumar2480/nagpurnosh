@@ -1,4 +1,4 @@
-/* Basic CSS styling for NagpurNosh */
+
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -8,7 +8,6 @@ body {
   padding: 0;
 }
 
-/* Hero Banner */
 .hero-box {
   background-color: #198754;
   color: #ffffff;
@@ -20,7 +19,6 @@ body {
   font-size: 16px;
 }
 
-/* Simple CSS Animation using @keyframes */
 @keyframes floatTitle {
   from {
     transform: translateY(0px);
@@ -37,7 +35,6 @@ body {
   animation-direction: alternate;
 }
 
-/* Info Box */
 .info-box {
   background-color: #fff8e1;
   border: 2px solid #ffc107;
@@ -45,7 +42,6 @@ body {
   margin-top: 15px;
 }
 
-/* Images inside cards */
 .mess-img {
   width: 100%;
   height: 150px;
@@ -54,14 +50,12 @@ body {
   margin-bottom: 6px;
 }
 
-/* Table caption */
 table caption {
   caption-side: bottom;
   color: #555555;
   padding-top: 8px;
 }
 
-/* Footer */
 .footer-box {
   background-color: #14532d;
   color: #ffffff;
@@ -69,7 +63,6 @@ table caption {
   margin-top: 20px;
 }
 
-/* Link states */
 .footer-box a:link {
   color: #ffe082;
 }
